@@ -130,13 +130,13 @@ internal class BannerGenerator {
                             };
 
                 var logoY = pinnedPosition switch {
-                                PinnedPosition.BottomLeft => header.Height * 0.95d - logoHeight,
-                                // PinnedPosition.BottomLeft   => (header.Height - logoHeight) / 2d,
+                                // PinnedPosition.BottomLeft => header.Height * 0.95d - logoHeight,
+                                PinnedPosition.BottomLeft   => (header.Height - logoHeight) / 2d,
                                 PinnedPosition.UpperLeft    => header.Height * 0.05d,
                                 PinnedPosition.UpperCenter  => header.Height * 0.05d,
                                 PinnedPosition.CenterCenter => (header.Height - logoHeight) / 2d,
-                                // PinnedPosition.BottomCenter => (header.Height - logoHeight) / 2d,
-                                PinnedPosition.BottomCenter => header.Height * 0.95d - logoHeight,
+                                PinnedPosition.BottomCenter => (header.Height - logoHeight) / 2d,
+                                // PinnedPosition.BottomCenter => header.Height * 0.95d - logoHeight,
                                 _                           => throw new IndexOutOfRangeException("Invalid pinned position"),
                             };
 
